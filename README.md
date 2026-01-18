@@ -14,7 +14,18 @@ Real-time driver fatigue detection using **Python**, **MediaPipe**, and **OpenCV
 - OpenCV
 - MediaPipe
 
-## How to Run
-```bash
-pip install opencv-python mediapipe
-python driver_drowsiness_detection.py
+## How it Works
+The system uses MediaPipe Face Mesh to detect facial landmarks.
+Eye Aspect Ratio (EYE_AR) is used to determine eye closure.
+If eyes remain closed for a set duration, an alarm is triggered.
+
+## Setup
+1. Install Python 3.10
+2. Install dependencies:
+   pip install opencv-python mediapipe
+3. Run:
+   python driver_drowsiness_detection.py
+
+## Alarm
+The alarm sound is triggered when drowsiness is detected.
+Make sure `alarm.wav` is in the same directory as the script.
